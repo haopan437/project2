@@ -7,10 +7,10 @@
     "react-dom": "^16.8.0"
   },
   "scripts": {
-    "start": "index.js start",
-    "build": "index.js build",
-    "test": "index.js test --env=jsdom",
-    "eject": "index.js eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "react-scripts": "latest",
