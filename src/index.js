@@ -85,7 +85,7 @@ class App extends Component {
 
                 <Link
                     to={{
-                        pathname: '/rule/'
+                        pathname: '/'
 
                     }}
                 >
