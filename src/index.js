@@ -1,17 +1,102 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams
+} from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import './style.css';
+import Play from "./play";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import Rule from "./rule";
+
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+
+
+    render() {
+
+
+        return (
+
+            <Router>
+            <div>
+
+
+                <h3>WellComeGuessWorld</h3>
+
+
+                <Link
+                    to={
+                        '/play/1'
+
+                    }
+                >
+                    <button>choose  degree one</button>
+
+                </Link>
+
+                <Link
+                    to={
+                        '/play/2'
+                    }
+                >
+                    <button>choose  degree two</button>
+
+                </Link>
+
+                <Link
+                    to={
+                        '/play/3'
+                    }
+                >
+                    <button>choose  degree three</button>
+
+                </Link>
+                <hr />
+
+                <Link
+                    to="/rule"
+                >
+
+                    <button>Playrule</button>
+
+                </Link>
+                <hr />
+                <Switch>
+                    <Route exact path = "/play/:id" component={Play}  >
+                        <Play/>
+                    </Route>
+                    <Route exact path = "/rule/"  component={Rule} >
+                        <Rule/>
+                    </Route>
+                </Switch>
+
+
+                <hr />
+
+                <Link
+                    to={{
+                        pathname: '/'
+
+                    }}
+                >
+                    <button>reset</button>
+
+                </Link>
+            </div>
+            </Router>
+
+        );
+    }
+}
+
+render(<App />, document.getElementById('root'));

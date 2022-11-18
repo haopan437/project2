@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Child from "./components/childs/child";
+import Clear from "./components/childs/clear";
+class App extends Component{
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    constructor(props) {
+        super(props);
+        this.state = {num:0}
+    }
+
+    changeIt(num){
+        this.state.num = num
+        this.setState({num:num})
+    }
+
+
+    render(){
+        return (
+
+            <div className="">
+                <h1>count:{this.state.num}</h1>
+                <Child num = {this.state.num} myfun={this.changeIt.bind(this)}></Child>
+                <Child num = {this.state.num} myfun={this.changeIt.bind(this)}></Child>
+                <Clear num = {this.state.num} myfun={this.changeIt.bind(this)}></Clear>
+                <Child num = {this.state.num} myfun={this.changeIt.bind(this)}></Child>
+            </div>
+
+        );
+    }
+
 }
 
 export default App;
