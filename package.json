@@ -7,10 +7,12 @@
     "react-dom": "^16.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "react-scripts": "latest",
@@ -21,8 +23,7 @@
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.0.0",
     "browserify": "^14.4.0",
-    "reactify": "^1.1.1",
-    "mysql": "^2.11.1"
+    "reactify": "^1.1.1"
   },
   "browserslist": {
     "production": [
