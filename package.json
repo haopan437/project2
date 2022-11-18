@@ -12,12 +12,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "cd client && npm run build",
-    "client": "cd client && npm start"
-  },
+  
   "devDependencies": {
     "react-scripts": "latest",
     "express": "^4.13.3",
@@ -43,6 +38,6 @@
   },
   "engines": {
     "node": "16.13.2",
-    "npm": "8.6"
+    "npm": "8.1.2"
   }
 }
