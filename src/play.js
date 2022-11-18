@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import './style.css';
 let wo ;
 function getWord(id) {
@@ -237,7 +236,6 @@ function getRemainingGuess(id) {
 export default class Play extends Component{
     constructor(props) {
         super(props);
-
         this.state = {
             word: getWord(this.props.match.params.id).word.toLowerCase().split(''),
             originalWord: getWord(this.props.match.params.id).word.split(''),
