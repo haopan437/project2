@@ -6,17 +6,16 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-
   "scripts": {
-    "build": "cd packages/react-scripts && node bin/react-scripts.js build",
-    "client": "npm run start --prefix client",
-    "server": "nodemon src/index.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "node src/index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
 
+
   "devDependencies": {
+    "build": "cd packages/react-scripts && node bin/react-scripts.js build",
     "react-scripts": "latest",
     "express": "^4.13.3",
     "body-parser": "^1.15.2",
