@@ -6,9 +6,12 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
+
   "scripts": {
     "start": "node index.js",
-    "build": "cd client/ && yarn install && yarn build"
+    "dev": "nodemon index.js",
+    "build": "cd client && npm run build",
+    "client": "cd client && npm start"
   },
   "devDependencies": {
     "react-scripts": "latest",
